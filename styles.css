@@ -1,0 +1,22 @@
+/* Estilos personalizados para complementar Tailwind CSS */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ajustes para las miniaturas (puedes reemplazar con imágenes reales) */
+.bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+/* Hover para los botones */
+a:hover {
+  transition: background-color 0.3s ease;
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
