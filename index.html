@@ -30,7 +30,7 @@
           <div class="mt-4 h-40 bg-gray-200 flex items-center justify-center">
             <span class="text-gray-500">[Miniatura Minimalista]</span>
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</a>
+          <button onclick="selectDesign('Minimalista')" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</button>
         </div>
         <!-- Design: Corporativo -->
         <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -39,7 +39,7 @@
           <div class="mt-4 h-40 bg-gray-200 flex items-center justify-center">
             <span class="text-gray-500">[Miniatura Corporativo]</span>
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</a>
+          <button onclick="selectDesign('Corporativo')" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</button>
         </div>
         <!-- Design: Minecraft Profesional -->
         <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -48,7 +48,7 @@
           <div class="mt-4 h-40 bg-gray-200 flex items-center justify-center">
             <span class="text-gray-500">[Miniatura Minecraft]</span>
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</a>
+          <button onclick="selectDesign('Minecraft Profesional')" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</button>
         </div>
         <!-- Design: Fortnite Profesional -->
         <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -57,7 +57,7 @@
           <div class="mt-4 h-40 bg-gray-200 flex items-center justify-center">
             <span class="text-gray-500">[Miniatura Fortnite]</span>
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</a>
+          <button onclick="selectDesign('Fortnite Profesional')" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</button>
         </div>
         <!-- Design: Cyberpunk Profesional -->
         <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -66,16 +66,16 @@
           <div class="mt-4 h-40 bg-gray-200 flex items-center justify-center">
             <span class="text-gray-500">[Miniatura Cyberpunk]</span>
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</a>
+          <button onclick="selectDesign('Cyberpunk Profesional')" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Seleccionar Diseño</button>
         </div>
         <!-- Suggest Design -->
         <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
           <h3 class="text-xl font-semibold">Sugerir Diseño</h3>
           <p class="text-gray-600 mt-2">¿Tienes una idea? Escribe tu diseño personalizado (ej., Star Wars).</p>
           <div class="mt-4">
-            <input type="text" placeholder="Ej., Currículum Star Wars Profesional" class="w-full p-2 border rounded">
+            <input type="text" id="custom-design" placeholder="Ej., Currículum Star Wars Profesional" class="w-full p-2 border rounded">
           </div>
-          <a href="#form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar Sugerencia</a>
+          <button onclick="selectCustomDesign()" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar Sugerencia</button>
         </div>
       </div>
     </div>
@@ -85,7 +85,8 @@
   <section id="form" class="py-12 bg-gray-100">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Completa tu Información</h2>
-      <form action="https://formspree.io/f/mpwlajyr" method="POST" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <form action="https://formspree.io/f/xxxxxxxx" method="POST" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <!-- Replace xxxxxxxx with your Formspree Form ID -->
         <!-- Diseño Seleccionado -->
         <div class="mb-4">
           <label for="design" class="block text-gray-700 font-semibold mb-2">Diseño Seleccionado</label>
@@ -140,11 +141,55 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Contáctame</h2>
+      <p class="text-gray-600 text-center mb-6">Si deseas actualizar tu currículum o cambiar de diseño, contáctame aquí. Responderé en un plazo máximo de 24 horas.</p>
+      <form action="https://formspree.io/f/xxxxxxxx" method="POST" class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
+        <!-- Replace xxxxxxxx with your Formspree Form ID (can be the same or a new one) -->
+        <!-- Nombre -->
+        <div class="mb-4">
+          <label for="contact-name" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+          <input type="text" id="contact-name" name="name" required class="w-full p-2 border rounded" placeholder="Ej., Juan Pérez">
+        </div>
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="contact-email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+          <input type="email" id="contact-email" name="email" required class="w-full p-2 border rounded" placeholder="Ej., juan@example.com">
+        </div>
+        <!-- Mensaje -->
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+          <textarea id="message" name="message" required class="w-full p-2 border rounded" rows="4" placeholder="Ej., Quiero actualizar mi currículum a un diseño Cyberpunk"></textarea>
+        </div>
+        <!-- Botón Enviar -->
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-blue-600 text-white py-4">
     <div class="container mx-auto text-center">
       <p>Currículum generado por [Tu Nombre] | Contacto: t.me/eduarx</p>
     </div>
   </footer>
+
+  <!-- JavaScript for Design Selection -->
+  <script>
+    function selectDesign(design) {
+      document.getElementById('design').value = design;
+      window.scrollTo({ top: document.getElementById('form').offsetTop, behavior: 'smooth' });
+    }
+    function selectCustomDesign() {
+      const customDesign = document.getElementById('custom-design').value;
+      if (customDesign) {
+        document.getElementById('design').value = 'Sugerencia Personalizada';
+        document.getElementById('others').value += `\nSugerencia de diseño: ${customDesign}`;
+        window.scrollTo({ top: document.getElementById('form').offsetTop, behavior: 'smooth' });
+      }
+    }
+  </script>
 </body>
 </html>
